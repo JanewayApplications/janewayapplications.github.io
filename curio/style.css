@@ -1,0 +1,61 @@
+:root {
+  --bg: #F3E8CF;
+  --surface: #FBF5E6;
+  --text: #3A2617;
+  --muted: #6E5139;
+  --line: #DCC9A3;
+  --navy: #1F2F4E;
+  --rust: #A23A2B;
+  --wood: #6B4528;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #141A26;
+    --surface: #1C2332;
+    --text: #EDE4D0;
+    --muted: #B3A893;
+    --line: #323B4E;
+    --navy: #A9BCE0;
+    --rust: #E08A6E;
+    --wood: #8A5E3A;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 Figtree, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+a { color: var(--navy); text-underline-offset: 3px; }
+a:hover { color: var(--rust); }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+header.site { padding: 28px 0 0; }
+header.site .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+.wordmark { font-family: "IM Fell English", Georgia, serif; font-size: 34px; color: var(--text); text-decoration: none; line-height: 1; }
+.wordmark span { color: var(--rust); }
+nav.site a { margin-left: 18px; font-size: 15px; }
+nav.site a:first-child { margin-left: 0; }
+.rule { border: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); height: 4px; margin: 14px 0 0; }
+h1, h2, h3 { font-family: "IM Fell English", Georgia, serif; font-weight: 400; line-height: 1.2; }
+h1 { font-size: clamp(34px, 7vw, 52px); margin: 40px 0 10px; }
+h2 { font-size: 27px; margin: 44px 0 8px; }
+h3 { font-size: 20px; margin: 26px 0 4px; }
+p, li { max-width: 65ch; }
+.lede { font-size: 20px; color: var(--muted); margin: 0 0 24px; }
+.shelf { display: flex; align-items: flex-end; gap: 3px; height: 130px; padding: 0 6px; margin: 30px 0 0; overflow: hidden; }
+.shelf i { display: block; border-radius: 2px 2px 0 0; box-shadow: inset -3px 0 3px rgba(0,0,0,.25); }
+.ledge { height: 10px; background: var(--wood); border-top: 3px solid #8A5E3A; border-bottom: 3px solid #4A2F1B; }
+.features { list-style: none; padding: 0; margin: 0; border-top: 3px double var(--line); }
+.features li { padding: 14px 0; border-bottom: 1px solid var(--line); }
+.features strong { font-family: "IM Fell English", Georgia, serif; font-weight: 400; font-size: 20px; display: block; }
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 14px; }
+.plan { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 18px; }
+.plan h3 { margin-top: 0; }
+.price { font-family: "Courier Prime", "Courier New", monospace; font-size: 18px; }
+.soon { display: inline-block; margin-top: 8px; padding: 10px 16px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+.doc h2 { font-size: 24px; margin-top: 34px; }
+.meta { color: var(--muted); font-size: 15px; }
+footer.site { margin: 56px 0 0; padding: 22px 0 40px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+footer.site a { margin-right: 16px; }
